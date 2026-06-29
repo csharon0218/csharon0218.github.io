@@ -131,41 +131,6 @@
       max-width: 700px;
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 9px 14px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--dark);
-      background: #ffffff;
-    }
-
-    .button:hover {
-      border-color: var(--blue);
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    .button.primary {
-      background: var(--dark);
-      color: #ffffff;
-      border-color: var(--dark);
-    }
-
-    .button.primary:hover {
-      background: #1f2937;
-      color: #ffffff;
-    }
-
     .profile-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -313,10 +278,6 @@
     }
 
     .contact-box {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: center;
       padding: 30px;
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -330,16 +291,48 @@
     }
 
     .contact-box p {
-      margin: 0;
+      margin: 0 0 20px;
       color: var(--muted);
       font-size: 15px;
-      max-width: 620px;
+      max-width: 680px;
     }
 
-    .contact-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      word-break: break-all;
+    }
+
+    .contact-value a {
+      color: var(--dark);
+    }
+
+    .contact-value a:hover {
+      color: var(--blue);
     }
 
     footer {
@@ -378,9 +371,8 @@
         gap: 6px;
       }
 
-      .contact-box {
-        flex-direction: column;
-        align-items: flex-start;
+      .contact-methods {
+        grid-template-columns: 1fr;
       }
 
       h1 {
@@ -448,12 +440,6 @@
       ROS-based navigation, LiDAR mapping, sensor fusion, and learning-based control
       systems through research projects and internships.
     </p>
-
-    <div class="links">
-      <a class="button primary" href="mailto:csharon0218@gmail.com">Email</a>
-      <a class="button" href="https://github.com/csharon0218" target="_blank">GitHub</a>
-      <a class="button" href="#highlights">View Highlights</a>
-    </div>
   </div>
 
   <aside class="profile-card">
@@ -627,9 +613,22 @@
       </p>
     </div>
 
-    <div class="contact-links">
-      <a class="button primary" href="mailto:csharon0218@gmail.com">Email</a>
-      <a class="button" href="https://github.com/csharon0218" target="_blank">GitHub</a>
+    <div class="contact-methods">
+      <div class="contact-item">
+        <span class="contact-label">Email</span>
+        <div class="contact-value">
+          <a href="mailto:csharon@naver.com">csharon@naver.com</a>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-label">GitHub</span>
+        <div class="contact-value">
+          <a href="https://github.com/csharon0218" target="_blank">
+            github.com/csharon0218
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
