@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Highlights | Minseo Choi</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --light: #f7f8fa;
+      --line: #e5e7eb;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 15px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
+
+    .page-title {
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 42px;
+      line-height: 1.15;
+      color: var(--dark);
+      letter-spacing: -0.035em;
+    }
+
+    .page-desc {
+      margin: 0;
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .section {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      margin: 0 0 20px;
+      font-size: 27px;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .highlight-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      background: #ffffff;
+    }
+
+    .highlight-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .highlight-card h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.4;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+    }
+
+    .date {
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--light);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .award-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .award-item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .award-item:last-child {
+      border-bottom: none;
+    }
+
+    .year {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .award-item h3 {
+      margin: 0 0 5px;
+      font-size: 17px;
+      color: var(--dark);
+    }
+
+    .award-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .link-inline {
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .page-desc {
+        font-size: 17px;
+      }
+
+      .highlight-top {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .award-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="site-name">Minseo Choi</a>
+
+```
+  <nav class="nav">
+    <a href="index.html">About</a>
+    <a class="active" href="highlights.html">Highlights</a>
+    <a href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</div>
+```
+
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <span class="label">Selected Highlights</span>
+      <h1>Highlights</h1>
+      <p class="page-desc">
+        Selected research experiences, internships, awards, academic achievements, and leadership activities.
+      </p>
+    </section>
+
+```
+<section class="section">
+  <h2 class="section-title">Research & Internship</h2>
+
+  <div class="highlight-list">
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>Incoming Integrated M.S./Ph.D. Student at Korea University AI</h3>
+        <span class="date">Sep. 2026</span>
+      </div>
+      <p>
+        Will join the Graduate School of Artificial Intelligence at Korea University
+        as an incoming Integrated M.S./Ph.D. student.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Graduate Study</span>
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Embodied AI</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>Physical AI Platform R&D Internship at ROBOTIS</h3>
+        <span class="date">Dec. 2025 – Feb. 2026</span>
+      </div>
+      <p>
+        Worked on ROS2-based manipulator control, IK-based trajectory generation,
+        imitation-learning-based manipulation policies, real robot evaluation, and
+        autonomous delivery robot field testing.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Physical AI</span>
+        <span class="tag">ROS2</span>
+        <span class="tag">Imitation Learning</span>
+        <span class="tag">Robot Manipulation</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>University of Nevada, Las Vegas Research Internship</h3>
+        <span class="date">Jan. 2025 – May 2025</span>
+      </div>
+      <p>
+        Developed autonomous navigation systems using a rover equipped with LiDAR,
+        GPS, and IMU, focusing on obstacle avoidance, localization, and path planning.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Autonomous Navigation</span>
+        <span class="tag">LiDAR</span>
+        <span class="tag">Sensor Fusion</span>
+        <span class="tag">Path Planning</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>KSAS Fall Conference Poster Presentation</h3>
+        <span class="date">2025</span>
+      </div>
+      <p>
+        Presented “A Webots-based HILS Testbed for Low-cost UAV Vision Systems”
+        at the KSAS Fall Conference. The work focused on Webots-based HILS validation,
+        monocular vision-based localization, and low-cost UAV vision systems.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Conference Poster</span>
+        <span class="tag">UAV Vision</span>
+        <span class="tag">Webots</span>
+        <span class="tag">HILS</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Honors & Awards</h2>
+
+  <div class="award-grid">
+    <div class="award-item">
+      <div class="year">2026</div>
+      <div>
+        <h3>Good Conduct & Excellent Student Award</h3>
+        <p>
+          Selected as a recipient at Korea Aerospace University for academic excellence,
+          leadership, mentoring, and university contributions.
+          <a class="link-inline" href="https://kaunews.kau.ac.kr/pages/news.php?searchkey=&searchvalue=&code=s1101&page=&selstrdate=&selenddate=&mode=read&seq=3666" target="_blank">Official article</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2025</div>
+      <div>
+        <h3>National SW-Centered University Competition — Grand Prize</h3>
+        <p>
+          Received the Grand Prize at the National SW-Centered University Competition.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2025</div>
+      <div>
+        <h3>F-16 AI Pilot Championship — Excellence Award</h3>
+        <p>
+          Developed an AI pilot agent for real-time dogfight scenarios using an aviation simulator.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2024</div>
+      <div>
+        <h3>AI F1Tenth Autonomous Driving Competition — Grand Prize</h3>
+        <p>
+          Developed autonomous racing software using reactive methods, planning, Pure Pursuit,
+          and learning-based approaches.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2024</div>
+      <div>
+        <h3>AI Business Hackathon — Excellence Prize</h3>
+        <p>
+          Received an Excellence Prize at the AI Business Hackathon hosted by Korea Aerospace University.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2023</div>
+      <div>
+        <h3>Autonomous Driving Robot Competition — Excellence Prize</h3>
+        <p>
+          Received an Excellence Prize for an autonomous driving robot project at Korea Aerospace University.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2023</div>
+      <div>
+        <h3>College Student Creative Mobility Competition — 4th Place</h3>
+        <p>
+          Received 4th place in the autonomous driving division technical report category.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2022</div>
+      <div>
+        <h3>AI Drone Racing Competition — Grand Prize</h3>
+        <p>
+          Received the Grand Prize at the AI Drone Racing Competition hosted by Korea Aerospace University.
+        </p>
+      </div>
+    </div>
+
+    <div class="award-item">
+      <div class="year">2022–2025</div>
+      <div>
+        <h3>Academic Excellence Scholarship</h3>
+        <p>
+          Awarded for maintaining outstanding academic performance for six consecutive semesters.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Leadership & Activities</h2>
+
+  <div class="highlight-list">
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>KAU Extracurricular Expo Online Team Leader</h3>
+        <span class="date">Mar. 2026 – May 2026</span>
+      </div>
+      <p>
+        Led online promotion for the KAU Extracurricular Expo through content planning,
+        SNS management, student outreach, online events, and promotional goods initiatives.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Team Leadership</span>
+        <span class="tag">SNS Promotion</span>
+        <span class="tag">Student Engagement</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>KAU Learning Crew Coach</h3>
+        <span class="date">Mar. 2026 – May 2026</span>
+      </div>
+      <p>
+        Developed and delivered a four-session online mentoring program on academic planning,
+        research preparation, internships, competitions, and career pathways.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Mentoring</span>
+        <span class="tag">Research Preparation</span>
+        <span class="tag">Career Guidance</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>Team Leader, Aerospace Drone Innovation Program Supporters</h3>
+        <span class="date">Sep. 2025 – Present</span>
+      </div>
+      <p>
+        Planned and promoted educational courses and events, producing weekly promotional
+        content such as card news and reels.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Team Leader</span>
+        <span class="tag">Content Planning</span>
+        <span class="tag">Outreach</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>Academic Mentoring & SW Mentoring Programs</h3>
+        <span class="date">2024 – Present</span>
+      </div>
+      <p>
+        Served as a mentor for physics and programming courses, supporting students through
+        weekly mentoring sessions and academic counseling.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Academic Mentoring</span>
+        <span class="tag">Programming Education</span>
+        <span class="tag">Student Support</span>
+      </div>
+    </article>
+
+    <article class="highlight-card">
+      <div class="highlight-top">
+        <h3>Vice President of Department</h3>
+        <span class="date">Nov. 2022 – Nov. 2023</span>
+      </div>
+      <p>
+        Planned and organized department events, coordinated communication between faculty
+        and students, and represented the department in university-level meetings.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Student Leadership</span>
+        <span class="tag">Event Planning</span>
+        <span class="tag">Communication</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  © 2026 Minseo Choi. Built with GitHub Pages.
+</footer>
+```
+
+  </main>
+</body>
+</html>
