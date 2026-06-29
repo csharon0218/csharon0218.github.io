@@ -131,6 +131,55 @@
       max-width: 700px;
     }
 
+    .intro-contact {
+      margin-top: 26px;
+    }
+
+    .intro-email {
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .intro-email strong {
+      color: var(--dark);
+    }
+
+    .intro-email a {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .intro-email a:hover {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      background: #ffffff;
+      transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    }
+
+    .hero-button:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
     .profile-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -418,6 +467,18 @@
       ROS-based navigation, LiDAR mapping, sensor fusion, and learning-based control
       systems through research projects and internships.
     </p>
+
+    <div class="intro-contact">
+      <p class="intro-email">
+        <strong>Email:</strong>
+        <a href="mailto:csharon@naver.com">csharon@naver.com</a>
+      </p>
+
+      <div class="hero-links">
+        <a class="hero-button" href="https://github.com/csharon0218" target="_blank">GitHub</a>
+        <a class="hero-button" href="https://www.linkedin.com/in/minseo-choi-4b7939392/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
   </div>
 
   <aside class="profile-card">
@@ -526,6 +587,10 @@
   <div class="contact-box">
     <div>
       <h2>Contact</h2>
+      <p>
+        I am interested in research opportunities related to embodied AI, robotics,
+        Vision-Language-Action models, and multimodal perception.
+      </p>
     </div>
 
     <div class="contact-methods">
