@@ -2,104 +2,366 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minseo Choi</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minseo Choi's Personal Homepage</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #4a4a4a;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #177e9c;
+      text-decoration: none;
+      border-bottom: 1px solid #177e9c;
+    }
+
+    a:hover {
+      color: #0f5f75;
+      border-bottom-color: #0f5f75;
+    }
+
+    .topbar {
+      height: 86px;
+      border-bottom: 1px solid #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+    }
+
+    .topbar-inner {
+      width: 1120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      box-sizing: border-box;
+    }
+
+    .site-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #374151;
+      border-bottom: none;
+    }
+
+    .nav a {
+      margin-left: 36px;
+      font-size: 20px;
+      color: #374151;
+      border-bottom: none;
+    }
+
+    .nav a:hover {
+      color: #177e9c;
+    }
+
+    .hamburger {
+      width: 54px;
+      height: 54px;
+      background: #6b7280;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 32px;
+    }
+
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background: white;
+      content: "";
+      position: relative;
+    }
+
+    .hamburger span::before {
+      position: absolute;
+      top: -10px;
+    }
+
+    .hamburger span::after {
+      position: absolute;
+      top: 10px;
+    }
+
+    .layout {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 64px;
+      padding: 48px 24px 80px;
+      box-sizing: border-box;
+    }
+
+    .sidebar {
+      padding-top: 100px;
+    }
+
+    .profile-img {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #eeeeee;
+      padding: 5px;
+      background: white;
+      display: block;
+      margin-bottom: 22px;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4b5563;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-list li {
+      margin: 13px 0;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .info-list a {
+      color: #555;
+      border-bottom: none;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 24px;
+      color: #444;
+    }
+
+    .content {
+      max-width: 760px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #3f3f46;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #3f3f46;
+      margin-top: 42px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 0 0 24px;
+    }
+
+    .small-text {
+      font-size: 18px;
+    }
+
+    .news-list {
+      padding-left: 22px;
+      font-size: 18px;
+    }
+
+    .news-list li {
+      margin-bottom: 10px;
+    }
+
+    .research-list {
+      padding-left: 22px;
+      font-size: 18px;
+    }
+
+    .research-list li {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      margin-top: 48px;
+      font-size: 15px;
+      color: #888;
+    }
+
+    @media (max-width: 850px) {
+      .topbar {
+        height: auto;
+        padding: 20px 0;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        margin-top: 14px;
+      }
+
+      .nav a {
+        margin: 0 18px 10px 0;
+        display: inline-block;
+        font-size: 17px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 30px;
+      }
+
+      .sidebar {
+        padding-top: 0;
+      }
+
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="site-title" href="index.html">Minseo Choi's Personal Homepage</a>
 
 ```
-<aside class="sidebar">
-  <div class="profile">
-    <h1>Minseo Choi</h1>
-    <p class="subtitle">Undergraduate Researcher</p>
-    <p>AI · Robotics · Physical AI</p>
+  <nav class="nav">
+    <a href="publications.html">Publications</a>
+    <a href="statement.html">Personal Statement</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="awards.html">Awards</a>
+  </nav>
 
-    <hr>
-
-    <p><strong>Korea Aerospace University</strong></p>
-    <p>AI and Autonomous Driving Systems Engineering</p>
-    <p>Double Major in Software Engineering</p>
-
-    <hr>
-
-    <p><a href="mailto:csharon0218@gmail.com">Email</a></p>
-    <p><a href="https://github.com/csharon0218" target="_blank">GitHub</a></p>
-    <p><a href="cv.html">CV</a></p>
+  <div class="hamburger">
+    <span></span>
   </div>
+</div>
+```
+
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <img class="profile-img" src="https://github.com/csharon0218.png" alt="Minseo Choi profile photo">
+
+```
+  <div class="name">Minseo Choi</div>
+  <div class="role">Undergraduate Researcher</div>
+
+  <ul class="info-list">
+    <li><span class="icon">📍</span> South Korea</li>
+    <li><span class="icon">🏛</span> Korea Aerospace University</li>
+    <li><span class="icon">🔗</span> <a href="https://csharon0218.github.io/">Website</a></li>
+    <li><span class="icon">✉️</span> <a href="mailto:csharon0218@gmail.com">Email</a></li>
+    <li><span class="icon">💻</span> <a href="https://github.com/csharon0218" target="_blank">GitHub</a></li>
+  </ul>
 </aside>
 
 <main class="content">
-  <nav class="topnav">
-    <a href="index.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="publications.html">Publications</a>
-    <a href="awards.html">Awards</a>
-    <a href="cv.html">CV</a>
-  </nav>
+  <h1>About me</h1>
 
-  <section>
-    <h2>About me</h2>
+  <p class="small-text">
+    Language Level: IELTS 6.0; OPIc IM2
+  </p>
 
-    <p>
-      Hi, I am <strong>Minseo Choi</strong>, an undergraduate student at
-      <strong>Korea Aerospace University</strong>, majoring in
-      <strong>AI and Autonomous Driving Systems Engineering</strong>
-      with a double major in <strong>Software Engineering</strong>.
-    </p>
+  <p>
+    I am an undergraduate student from
+    <a href="https://www.kau.ac.kr/" target="_blank">Korea Aerospace University</a>,
+    majoring in <strong>AI and Autonomous Driving Systems Engineering</strong>
+    with a double major in <strong>Software Engineering</strong>.
+  </p>
 
-    <p>
-      My research interests lie in <strong>Embodied AI, Physical AI,
-      Vision-Language-Action models, imitation learning, reinforcement learning,
-      multimodal perception, autonomous driving, and robotics</strong>.
-    </p>
+  <p>
+    My research interests include <strong>Embodied AI</strong>,
+    <strong>Physical AI</strong>, <strong>Vision-Language-Action models</strong>,
+    <strong>imitation learning</strong>, <strong>reinforcement learning</strong>,
+    <strong>multimodal perception</strong>, <strong>autonomous driving</strong>,
+    and <strong>robotics</strong>.
+  </p>
 
-    <p>
-      I have gained hands-on experience through ROS-based robot navigation,
-      LiDAR mapping, sensor fusion, autonomous driving platforms, YOLO-based
-      perception systems, UAV vision systems, and real-world robotic system
-      development.
-    </p>
+  <p>
+    I have worked on projects related to ROS-based robot navigation,
+    LiDAR mapping, sensor fusion, autonomous driving platforms,
+    YOLO-based perception systems, UAV vision systems, and real-world robotic
+    system development.
+  </p>
 
-    <p>
-      My long-term goal is to develop intelligent systems that can perceive,
-      reason, and interact with complex real-world environments.
-    </p>
-  </section>
+  <p>
+    You can find my CV here:
+    <a href="cv.html">CV page</a>.
+  </p>
 
-  <section>
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Embodied AI and Physical AI</li>
-      <li>Vision-Language-Action Models</li>
-      <li>Imitation Learning and Reinforcement Learning</li>
-      <li>Autonomous Driving and Robotics</li>
-      <li>Multimodal Perception and 3D Vision</li>
-      <li>SLAM, Navigation, and Sensor Fusion</li>
-    </ul>
-  </section>
+  <p>
+    <a href="mailto:csharon0218@gmail.com">Email</a> /
+    <a href="https://github.com/csharon0218" target="_blank">Github</a>
+  </p>
 
-  <section>
-    <h2>News</h2>
-    <ul>
-      <li>
-        <strong>2026</strong> — Selected as a recipient of the
-        Good Conduct & Excellent Student Award at Korea Aerospace University.
-      </li>
-      <li>
-        <strong>2025</strong> — Presented a poster at the KSAS Fall Conference
-        on a Webots-based HILS testbed for low-cost UAV vision systems.
-      </li>
-      <li>
-        <strong>2025</strong> — Participated in a research internship at
-        the University of Nevada, Las Vegas.
-      </li>
-    </ul>
-  </section>
+  <h2>Research Interests</h2>
+  <ul class="research-list">
+    <li>Embodied AI and Physical AI</li>
+    <li>Vision-Language-Action Models</li>
+    <li>Imitation Learning and Reinforcement Learning</li>
+    <li>Autonomous Driving and Robotics</li>
+    <li>Multimodal Perception and 3D Vision</li>
+    <li>SLAM, Navigation, and Sensor Fusion</li>
+  </ul>
+
+  <h2>News</h2>
+  <ul class="news-list">
+    <li>
+      <strong>2026</strong> — Selected as a recipient of the Good Conduct & Excellent Student Award
+      at Korea Aerospace University.
+      <a href="https://kaunews.kau.ac.kr/pages/news.php?searchkey=&searchvalue=&code=s1101&page=&selstrdate=&selenddate=&mode=read&seq=3666" target="_blank">
+        Official article
+      </a>
+    </li>
+    <li>
+      <strong>2025</strong> — Presented a poster at the KSAS Fall Conference on a
+      Webots-based HILS testbed for low-cost UAV vision systems.
+    </li>
+    <li>
+      <strong>2025</strong> — Participated in a research internship at the University of Nevada, Las Vegas.
+    </li>
+  </ul>
+
+  <div class="footer">
+    © 2026 Minseo Choi
+  </div>
 </main>
 ```
 
