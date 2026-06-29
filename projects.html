@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Minseo Choi</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --light: #f7f8fa;
+      --line: #e5e7eb;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 15px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
+
+    .page-title {
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 42px;
+      line-height: 1.15;
+      color: var(--dark);
+      letter-spacing: -0.035em;
+    }
+
+    .page-desc {
+      margin: 0;
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .section {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      margin: 0 0 20px;
+      font-size: 27px;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 24px;
+      background: #ffffff;
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 19px;
+      line-height: 1.4;
+      color: var(--dark);
+      letter-spacing: -0.015em;
+    }
+
+    .date {
+      flex-shrink: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .project-card p {
+      margin: 0 0 12px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .project-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .project-card li {
+      margin-bottom: 7px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--light);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .page-desc {
+        font-size: 17px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-top {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="site-name">Minseo Choi</a>
+
+```
+  <nav class="nav">
+    <a href="index.html">About</a>
+    <a href="highlights.html">Highlights</a>
+    <a class="active" href="projects.html">Projects</a>
+    <a href="publications.html">Publications</a>
+  </nav>
+</div>
+```
+
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <span class="label">Selected Projects</span>
+      <h1>Projects</h1>
+      <p class="page-desc">
+        Selected undergraduate projects and R&D experiences in robotics, autonomous driving,
+        UAV vision systems, and AI applications.
+      </p>
+    </section>
+
+```
+<section class="section">
+  <h2 class="section-title">Robotics & Autonomous Driving</h2>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-top">
+        <h3>F1Tenth Autonomous Racing</h3>
+        <span class="date">Jun. 2024 – Dec. 2024</span>
+      </div>
+      <p>
+        Developed autonomous driving software using a 1/10-scale racing car platform.
+      </p>
+      <ul>
+        <li>Implemented racing functions based on reactive methods and planning.</li>
+        <li>Applied control methods such as Pure Pursuit for autonomous racing.</li>
+        <li>Explored end-to-end reinforcement learning for performance improvement.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Autonomous Racing</span>
+        <span class="tag">Planning</span>
+        <span class="tag">Pure Pursuit</span>
+        <span class="tag">Reinforcement Learning</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>ERP42 Localization Platform Project</h3>
+        <span class="date">Mar. 2024 – Dec. 2024</span>
+      </div>
+      <p>
+        Worked on localization and sensor fusion tasks using the ERP42 autonomous vehicle platform.
+      </p>
+      <ul>
+        <li>Performed GPS and IMU-based sensor fusion and filtering.</li>
+        <li>Built a school map using NDT localization during SLAM operations.</li>
+        <li>Compared odometry accuracy generated from IMU and GPS data.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">ERP42</span>
+        <span class="tag">Localization</span>
+        <span class="tag">Sensor Fusion</span>
+        <span class="tag">SLAM</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>Webots Turtlebot4 Navigation</h3>
+        <span class="date">Mar. 2024 – Jun. 2024</span>
+      </div>
+      <p>
+        Implemented navigation functions for Turtlebot4 in a Webots-based simulation environment.
+      </p>
+      <ul>
+        <li>Studied and implemented core Nav2 modules including Planner, Controller, and Behavior Tree.</li>
+        <li>Simulated emergency evacuation scenarios with dynamic and static obstacles.</li>
+        <li>Used LiDAR and camera sensors to navigate toward target locations.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Webots</span>
+        <span class="tag">Turtlebot4</span>
+        <span class="tag">Nav2</span>
+        <span class="tag">Behavior Tree</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>Turtlebot Autonomous Navigation</h3>
+        <span class="date">Aug. 2023 – Dec. 2023</span>
+      </div>
+      <p>
+        Developed algorithms for Turtlebot to explore unknown environments and search for QR codes.
+      </p>
+      <ul>
+        <li>Designed navigation logic for maintaining a safe distance from walls.</li>
+        <li>Used RViz navigation cost values for obstacle avoidance and path planning.</li>
+        <li>Experimented with a Frontier-based edge-tracking algorithm for exploration.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Turtlebot</span>
+        <span class="tag">Navigation</span>
+        <span class="tag">Obstacle Avoidance</span>
+        <span class="tag">Frontier Exploration</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>ERP42 Object Detection Platform Project</h3>
+        <span class="date">Mar. 2023 – Dec. 2023</span>
+      </div>
+      <p>
+        Developed object detection functions for traffic light and traffic sign recognition
+        using the ERP42 vehicle platform.
+      </p>
+      <ul>
+        <li>Used YOLOv5 for traffic sign detection and real-time recognition.</li>
+        <li>Built a ROS package integrating camera node data with YOLO-Darknet.</li>
+        <li>Developed traffic light classification logic for intersection missions.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">ERP42</span>
+        <span class="tag">YOLOv5</span>
+        <span class="tag">ROS</span>
+        <span class="tag">Object Detection</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>F-16 AI Pilot Championship</h3>
+        <span class="date">Jul. 2025 – Sep. 2025</span>
+      </div>
+      <p>
+        Developed an AI pilot agent for controlling an F-16 fighter jet in a real-time simulator.
+      </p>
+      <ul>
+        <li>Designed decision-making algorithms for real-time dogfight scenarios.</li>
+        <li>Applied AI and autonomous systems techniques in an aviation simulation environment.</li>
+        <li>Gained practical experience through an industry-academia-research collaboration.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">AI Pilot</span>
+        <span class="tag">Decision Making</span>
+        <span class="tag">Simulation</span>
+        <span class="tag">Autonomous Systems</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">UAV Vision & Simulation</h2>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-top">
+        <h3>SW-Centered University R&D Project — UAV Vision System</h3>
+        <span class="date">Sep. 2025 – Dec. 2025</span>
+      </div>
+      <p>
+        Participated in a university–industry collaborative R&D project on low-cost UAV vision systems.
+      </p>
+      <ul>
+        <li>Collected UAV sensor data and visualized results in RViz for analysis and validation.</li>
+        <li>Verified and tested the final system using a Webots-based HILS testbed.</li>
+        <li>Contributed to vision-based localization system validation for low-cost UAVs.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">UAV Vision</span>
+        <span class="tag">Webots</span>
+        <span class="tag">HILS</span>
+        <span class="tag">RViz</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-top">
+        <h3>Bus Detection Service for the Visually Impaired</h3>
+        <span class="date">Jul. 2024 – Oct. 2024</span>
+      </div>
+      <p>
+        Developed an assistive system combining GPS and AI image recognition to help
+        visually impaired users detect and navigate buses.
+      </p>
+      <ul>
+        <li>Integrated ESP32 camera data with YOLO-based bus image recognition.</li>
+        <li>Implemented ultrasonic sensing to detect obstacles and estimate distance to the bus.</li>
+        <li>Designed an AI-based perception pipeline for mobility assistance.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Assistive AI</span>
+        <span class="tag">YOLO</span>
+        <span class="tag">ESP32</span>
+        <span class="tag">Computer Vision</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">AI Applications</h2>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-top">
+        <h3>Pet Health AI Application</h3>
+        <span class="date">Sep. 2025 – Dec. 2025</span>
+      </div>
+      <p>
+        Participated in an interdisciplinary SW R&D project developing a pet health
+        management application.
+      </p>
+      <ul>
+        <li>Worked on AI modules for detecting eye diseases using computer vision.</li>
+        <li>Developed deep learning-based analysis for urine test results.</li>
+        <li>Explored AI-based diagnosis integration for early disease detection and health monitoring.</li>
+      </ul>
+      <div class="tag-row">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Healthcare AI</span>
+        <span class="tag">AI Application</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  © 2026 Minseo Choi. Built with GitHub Pages.
+</footer>
+```
+
+  </main>
+</body>
+</html>
