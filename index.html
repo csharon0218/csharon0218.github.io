@@ -22,6 +22,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -127,22 +131,6 @@
       max-width: 700px;
     }
 
-    .link-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 26px;
-    }
-
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-weight: 600;
-      font-size: 15px;
-      color: var(--blue);
-    }
-
     .profile-card {
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -210,81 +198,68 @@
       max-width: 760px;
     }
 
-    .preview-grid {
+    .research-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       margin-bottom: 18px;
     }
 
-    .preview-card {
+    .research-card {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 20px;
       background: #ffffff;
     }
 
-    .preview-card h3 {
+    .research-card h3 {
       margin: 0 0 8px;
       font-size: 17px;
       color: var(--dark);
     }
 
-    .preview-card p {
+    .research-card p {
       margin: 0;
       font-size: 14.5px;
       color: var(--muted);
     }
 
-    .highlight-list {
+    .page-links {
       display: grid;
-      gap: 0;
-      margin-bottom: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .highlight-item {
-      display: grid;
-      grid-template-columns: 92px 1fr;
-      gap: 18px;
-      padding: 16px 0;
-      border-bottom: 1px solid #f0f0f0;
+    .page-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      background: var(--light);
+      transition: border-color 0.15s ease, transform 0.15s ease;
     }
 
-    .highlight-item:last-child {
-      border-bottom: none;
+    .page-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-2px);
+      text-decoration: none;
     }
 
-    .year {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--blue);
-    }
-
-    .highlight-item h3 {
-      margin: 0 0 5px;
+    .page-card h3 {
+      margin: 0 0 8px;
       font-size: 17px;
       color: var(--dark);
     }
 
-    .highlight-item p {
-      margin: 0;
-      font-size: 15px;
+    .page-card p {
+      margin: 0 0 10px;
+      font-size: 14.5px;
       color: var(--muted);
     }
 
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .chip {
-      padding: 7px 11px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--light);
+    .page-card span {
       font-size: 14px;
-      color: #374151;
+      font-weight: 700;
+      color: var(--blue);
     }
 
     .contact-box {
@@ -372,13 +347,9 @@
         max-width: 380px;
       }
 
-      .preview-grid {
+      .research-grid,
+      .page-links {
         grid-template-columns: 1fr;
-      }
-
-      .highlight-item {
-        grid-template-columns: 1fr;
-        gap: 6px;
       }
 
       .contact-methods {
@@ -405,11 +376,9 @@
 ```
   <nav class="nav">
     <a href="index.html">About</a>
-    <a href="research.html">Research</a>
     <a href="highlights.html">Highlights</a>
     <a href="projects.html">Projects</a>
     <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
   </nav>
 </div>
 ```
@@ -451,11 +420,6 @@
       ROS-based navigation, LiDAR mapping, sensor fusion, and learning-based control
       systems through research projects and internships.
     </p>
-
-    <div class="link-row">
-      <a class="text-link" href="research.html">View research interests →</a>
-      <a class="text-link" href="highlights.html">View full highlights →</a>
-    </div>
   </div>
 
   <aside class="profile-card">
@@ -496,20 +460,20 @@
 <section class="section">
   <h2 class="section-title">Research Interests</h2>
   <p class="section-desc">
-    My research interests focus on building intelligent agents that can understand,
+    My research interests are centered on building intelligent agents that can understand,
     learn from, and interact with complex real-world environments.
   </p>
 
-  <div class="preview-grid">
-    <article class="preview-card">
+  <div class="research-grid">
+    <article class="research-card">
       <h3>Embodied AI & Physical AI</h3>
       <p>
         Learning-based robotic systems that connect perception, decision-making,
-        and physical interaction.
+        and physical interaction in real-world environments.
       </p>
     </article>
 
-    <article class="preview-card">
+    <article class="research-card">
       <h3>VLA & Policy Learning</h3>
       <p>
         Vision-Language-Action models, imitation learning, reinforcement learning,
@@ -517,95 +481,46 @@
       </p>
     </article>
 
-    <article class="preview-card">
+    <article class="research-card">
       <h3>Multimodal Perception & HRI</h3>
       <p>
-        Multimodal representation learning, perception integration, and human-robot interaction.
+        Multimodal representation learning, perception integration, and human-robot
+        interaction for generalizable embodied agents.
       </p>
     </article>
   </div>
-
-  <a class="text-link" href="research.html">Read more about my research →</a>
 </section>
 
 <section class="section">
-  <h2 class="section-title">Selected Highlights</h2>
+  <h2 class="section-title">Explore More</h2>
   <p class="section-desc">
-    A brief overview of representative academic, research, and competition experiences.
+    More detailed information is organized into separate pages.
   </p>
 
-  <div class="highlight-list">
-    <div class="highlight-item">
-      <div class="year">2026</div>
-      <div>
-        <h3>Incoming Integrated M.S./Ph.D. Student at Korea University AI</h3>
-        <p>
-          Will join the Graduate School of Artificial Intelligence at Korea University
-          starting in September 2026.
-        </p>
-      </div>
-    </div>
+  <div class="page-links">
+    <a class="page-card" href="highlights.html">
+      <h3>Highlights</h3>
+      <p>
+        Awards, internships, academic achievements, and representative activities.
+      </p>
+      <span>View highlights →</span>
+    </a>
 
-    <div class="highlight-item">
-      <div class="year">2026</div>
-      <div>
-        <h3>Good Conduct & Excellent Student Award</h3>
-        <p>
-          Selected as a recipient at Korea Aerospace University for academic excellence,
-          student leadership, mentoring, and university contributions.
-        </p>
-      </div>
-    </div>
+    <a class="page-card" href="projects.html">
+      <h3>Projects</h3>
+      <p>
+        Undergraduate projects, robotics systems, autonomous driving, and AI applications.
+      </p>
+      <span>View projects →</span>
+    </a>
 
-    <div class="highlight-item">
-      <div class="year">2025</div>
-      <div>
-        <h3>Physical AI R&D Internship at ROBOTIS</h3>
-        <p>
-          Worked on ROS2-based manipulator control, imitation-learning policies,
-          real robot evaluation, and autonomous delivery robot field testing.
-        </p>
-      </div>
-    </div>
-
-    <div class="highlight-item">
-      <div class="year">2025</div>
-      <div>
-        <h3>UNLV Research Internship</h3>
-        <p>
-          Developed autonomous navigation pipelines using a rover equipped with
-          LiDAR, GPS, and IMU.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <a class="text-link" href="highlights.html">View all highlights →</a>
-</section>
-
-<section class="section">
-  <h2 class="section-title">Technical Skills</h2>
-  <p class="section-desc">
-    Tools and technologies I have used across AI, robotics, and autonomous systems projects.
-  </p>
-
-  <div class="chips">
-    <span class="chip">Python</span>
-    <span class="chip">C / C++</span>
-    <span class="chip">Kotlin</span>
-    <span class="chip">SQL</span>
-    <span class="chip">PyTorch</span>
-    <span class="chip">TensorFlow</span>
-    <span class="chip">YOLO</span>
-    <span class="chip">ROS2</span>
-    <span class="chip">Gazebo</span>
-    <span class="chip">Webots</span>
-    <span class="chip">SLAM</span>
-    <span class="chip">Nav2</span>
-    <span class="chip">Path Planning</span>
-    <span class="chip">Behavior Tree</span>
-    <span class="chip">Imitation Learning</span>
-    <span class="chip">Reinforcement Learning</span>
+    <a class="page-card" href="publications.html">
+      <h3>Publications</h3>
+      <p>
+        Poster presentations, academic outputs, and research-related publications.
+      </p>
+      <span>View publications →</span>
+    </a>
   </div>
 </section>
 
