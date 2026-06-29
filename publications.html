@@ -1,25 +1,317 @@
 <!DOCTYPE html>
 
-<html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Publications | Minseo Choi</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications | Minseo Choi</title>
 
-<style> :root { --bg: #ffffff; --text: #222222; --muted: #666666; --light: #f7f8fa; --line: #e5e7eb; --blue: #2563eb; --blue-soft: #eff6ff; --dark: #111827; } * { box-sizing: border-box; } body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.7; } a { color: var(--blue); text-decoration: none; } a:hover { text-decoration: underline; } .header { border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, 0.96); position: sticky; top: 0; z-index: 10; } .header-inner { max-width: 1040px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; } .site-name { font-size: 21px; font-weight: 700; color: var(--dark); letter-spacing: -0.02em; } .nav { display: flex; gap: 22px; font-size: 15px; } .nav a { color: var(--muted); font-weight: 500; } .nav a:hover, .nav a.active { color: var(--blue); text-decoration: none; } .container { max-width: 1040px; margin: 0 auto; padding: 52px 24px 80px; } .page-title { padding-bottom: 34px; border-bottom: 1px solid var(--line); } .label { display: inline-block; padding: 5px 10px; margin-bottom: 18px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-size: 14px; font-weight: 600; } h1 { margin: 0; font-size: 42px; line-height: 1.15; color: var(--dark); letter-spacing: -0.035em; } .section { padding: 42px 0; border-bottom: 1px solid var(--line); } .section:last-of-type { border-bottom: none; } .section-title { margin: 0 0 20px; font-size: 27px; color: var(--dark); letter-spacing: -0.02em; } .publication-card { border: 1px solid var(--line); border-radius: 18px; background: #ffffff; padding: 26px; } .pub-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; } .tag { display: inline-block; padding: 5px 10px; border-radius: 999px; background: var(--light); border: 1px solid var(--line); color: var(--muted); font-size: 13px; font-weight: 600; } .pub-title { margin: 0 0 10px; font-size: 23px; line-height: 1.35; color: var(--dark); letter-spacing: -0.02em; } .pub-title-ko { margin: 0 0 14px; font-size: 16px; color: var(--muted); font-weight: 500; } .authors { margin: 0 0 10px; color: #374151; font-size: 15px; } .authors strong { color: var(--dark); } .venue { margin: 0 0 22px; color: var(--muted); font-size: 15px; } .pub-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; margin-top: 22px; } .pub-block h3 { margin: 0 0 8px; font-size: 17px; color: var(--dark); } .pub-block p { margin: 0 0 14px; font-size: 15px; color: var(--muted); } .pub-block ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 15px; } .pub-block li { margin-bottom: 8px; } .keyword-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; } .keyword { padding: 6px 10px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-size: 13px; font-weight: 600; } .pub-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; } .button { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-weight: 600; color: var(--dark); background: #ffffff; } .button:hover { border-color: var(--blue); color: var(--blue); text-decoration: none; } footer { margin-top: 40px; color: var(--muted); font-size: 14px; text-align: center; } @media (max-width: 860px) { .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; } .nav { flex-wrap: wrap; gap: 14px; } h1 { font-size: 36px; } .publication-card { padding: 22px; } .pub-grid { grid-template-columns: 1fr; } } </style>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --light: #f7f8fa;
+      --line: #e5e7eb;
+      --blue: #2563eb;
+      --blue-soft: #eff6ff;
+      --dark: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 22px;
+      font-size: 15px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
+
+    .page-title {
+      padding-bottom: 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      display: inline-block;
+      padding: 5px 10px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.15;
+      color: var(--dark);
+      letter-spacing: -0.035em;
+    }
+
+    .section {
+      padding: 42px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      margin: 0 0 20px;
+      font-size: 27px;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .publication-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+      padding: 26px;
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--light);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .pub-title {
+      margin: 0 0 10px;
+      font-size: 23px;
+      line-height: 1.35;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+    }
+
+    .pub-title-ko {
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .authors {
+      margin: 0 0 10px;
+      color: #374151;
+      font-size: 15px;
+    }
+
+    .authors strong {
+      color: var(--dark);
+    }
+
+    .venue {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pub-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      margin-top: 22px;
+    }
+
+    .pub-block h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      color: var(--dark);
+    }
+
+    .pub-block p {
+      margin: 0 0 14px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .pub-block ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pub-block li {
+      margin-bottom: 8px;
+    }
+
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .keyword {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      background: #ffffff;
+    }
+
+    .button:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .publication-card {
+        padding: 22px;
+      }
+
+      .pub-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 
 </head>
 
-<body> <header class="header"> <div class="header-inner"> <a href="index.html" class="site-name">Minseo Choi</a>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="site-name">Minseo Choi</a>
 
+```
   <nav class="nav">
     <a href="index.html">About</a>
     <a href="highlights.html">Highlights</a>
     <a href="projects.html">Projects</a>
     <a class="active" href="publications.html">Publications</a>
+    <a href="index.html#contact">Contact</a>
   </nav>
 </div>
+```
 
-</header>
+  </header>
 
-<main class="container"> <section class="page-title"> <span class="label">Academic Publications</span> <h1>Publications</h1> </section>
+  <main class="container">
+    <section class="page-title">
+      <span class="label">Academic Publications</span>
+      <h1>Publications</h1>
+    </section>
 
+```
 <section class="section">
   <h2 class="section-title">Conference Papers & Posters</h2>
 
@@ -121,5 +413,8 @@
 <footer>
   © 2026 Minseo Choi. Built with GitHub Pages.
 </footer>
+```
 
-</main> </body> </html>
+  </main>
+</body>
+</html>
