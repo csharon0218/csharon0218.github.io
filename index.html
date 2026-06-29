@@ -1,123 +1,108 @@
-body {
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-color: #222;
-background-color: #ffffff;
-line-height: 1.7;
-}
+<!DOCTYPE html>
 
-.page {
-display: flex;
-max-width: 1200px;
-margin: 0 auto;
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minseo Choi</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
 
-.sidebar {
-width: 300px;
-min-height: 100vh;
-padding: 50px 30px;
-background-color: #f7f7f7;
-border-right: 1px solid #ddd;
-box-sizing: border-box;
-}
+<body>
+  <div class="page">
 
-.profile h1 {
-font-size: 28px;
-margin-bottom: 6px;
-}
+```
+<aside class="sidebar">
+  <div class="profile">
+    <h1>Minseo Choi</h1>
+    <p class="subtitle">Undergraduate Researcher</p>
+    <p>AI · Robotics · Physical AI</p>
 
-.subtitle {
-font-weight: bold;
-color: #555;
-}
+    <hr>
 
-.profile p {
-margin: 8px 0;
-font-size: 15px;
-}
+    <p><strong>Korea Aerospace University</strong></p>
+    <p>AI and Autonomous Driving Systems Engineering</p>
+    <p>Double Major in Software Engineering</p>
 
-.profile a {
-color: #0056b3;
-text-decoration: none;
-}
+    <hr>
 
-.profile a:hover {
-text-decoration: underline;
-}
+    <p><a href="mailto:csharon0218@gmail.com">Email</a></p>
+    <p><a href="https://github.com/csharon0218" target="_blank">GitHub</a></p>
+    <p><a href="cv.html">CV</a></p>
+  </div>
+</aside>
 
-hr {
-border: none;
-border-top: 1px solid #ddd;
-margin: 24px 0;
-}
+<main class="content">
+  <nav class="topnav">
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="publications.html">Publications</a>
+    <a href="awards.html">Awards</a>
+    <a href="cv.html">CV</a>
+  </nav>
 
-.content {
-flex: 1;
-padding: 40px 60px;
-box-sizing: border-box;
-}
+  <section>
+    <h2>About me</h2>
 
-.topnav {
-text-align: right;
-margin-bottom: 50px;
-}
+    <p>
+      Hi, I am <strong>Minseo Choi</strong>, an undergraduate student at
+      <strong>Korea Aerospace University</strong>, majoring in
+      <strong>AI and Autonomous Driving Systems Engineering</strong>
+      with a double major in <strong>Software Engineering</strong>.
+    </p>
 
-.topnav a {
-margin-left: 18px;
-color: #333;
-text-decoration: none;
-font-weight: bold;
-}
+    <p>
+      My research interests lie in <strong>Embodied AI, Physical AI,
+      Vision-Language-Action models, imitation learning, reinforcement learning,
+      multimodal perception, autonomous driving, and robotics</strong>.
+    </p>
 
-.topnav a:hover {
-color: #0056b3;
-}
+    <p>
+      I have gained hands-on experience through ROS-based robot navigation,
+      LiDAR mapping, sensor fusion, autonomous driving platforms, YOLO-based
+      perception systems, UAV vision systems, and real-world robotic system
+      development.
+    </p>
 
-section {
-margin-bottom: 42px;
-}
+    <p>
+      My long-term goal is to develop intelligent systems that can perceive,
+      reason, and interact with complex real-world environments.
+    </p>
+  </section>
 
-h2 {
-font-size: 28px;
-border-bottom: 1px solid #ddd;
-padding-bottom: 8px;
-margin-bottom: 20px;
-}
+  <section>
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Embodied AI and Physical AI</li>
+      <li>Vision-Language-Action Models</li>
+      <li>Imitation Learning and Reinforcement Learning</li>
+      <li>Autonomous Driving and Robotics</li>
+      <li>Multimodal Perception and 3D Vision</li>
+      <li>SLAM, Navigation, and Sensor Fusion</li>
+    </ul>
+  </section>
 
-ul {
-padding-left: 22px;
-}
+  <section>
+    <h2>News</h2>
+    <ul>
+      <li>
+        <strong>2026</strong> — Selected as a recipient of the
+        Good Conduct & Excellent Student Award at Korea Aerospace University.
+      </li>
+      <li>
+        <strong>2025</strong> — Presented a poster at the KSAS Fall Conference
+        on a Webots-based HILS testbed for low-cost UAV vision systems.
+      </li>
+      <li>
+        <strong>2025</strong> — Participated in a research internship at
+        the University of Nevada, Las Vegas.
+      </li>
+    </ul>
+  </section>
+</main>
+```
 
-li {
-margin-bottom: 8px;
-}
-
-a {
-color: #0056b3;
-}
-
-@media screen and (max-width: 800px) {
-.page {
-flex-direction: column;
-}
-
-.sidebar {
-width: 100%;
-min-height: auto;
-border-right: none;
-border-bottom: 1px solid #ddd;
-}
-
-.content {
-padding: 30px 24px;
-}
-
-.topnav {
-text-align: left;
-}
-
-.topnav a {
-display: inline-block;
-margin: 0 12px 10px 0;
-}
-}
+  </div>
+</body>
+</html>
